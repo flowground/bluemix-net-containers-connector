@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "floating_ips": {
+                    "description": "The new number of public IP addresses that you want to assign to your space.",
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ram": {
+                    "description": "The amount of container memory that you want to assign to your space.",
+                    "format": "int32",
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        },
+        "X_Auth_Token": {
+            "required": true,
+            "type": "string"
+        },
+        "X_Auth_Project_Id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

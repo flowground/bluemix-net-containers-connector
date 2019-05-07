@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "addSpaces": {
+                    "description": "The name or ID of the space where you want to provision your existing volume. Run `cf spaces` to retrieve the name, or `cf space <space_name> --guid` to retrieve the space ID. ",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "removeSpaces": {
+                    "description": "The name or ID of the space from which you want to unprovision your existing volume. Run `cf spaces` to retrieve the name, or `cf space <space_name> --guid` to retrieve the space ID.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "X_Auth_Token": {
+            "required": true,
+            "type": "string"
+        },
+        "X_Auth_Project_Id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

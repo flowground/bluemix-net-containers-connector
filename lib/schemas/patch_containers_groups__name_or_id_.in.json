@@ -1,0 +1,53 @@
+{
+    "type": "object",
+    "properties": {
+        "name_or_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "Autorecovery": {
+                    "description": "Enable or disable the Autorecovery mode for your container group. To enable it, enter true. If you want to disable it, enter false. Note: You can only enable/ disable Autorecovery mode if your container group was initially created with Autorecovery mode enabled.",
+                    "type": "string"
+                },
+                "Environment": {
+                    "description": "A list of environment variables that you want to add to your container group. Every environment variable needs to be a key=value pair. Every key that you use needs to be unique for this container group. Multiple environment variables are separated with comma (,)",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "NumberInstances": {
+                    "properties": {
+                        "Desired": {
+                            "description": "The number of container instances that you require.",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "Max": {
+                            "description": "The maximum number of container instances that you want to run in your container group.",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "Min": {
+                            "description": "The minimum number of container instances that you want to run in your container group.",
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "X_Auth_Token": {
+            "required": true,
+            "type": "string"
+        },
+        "X_Auth_Project_Id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

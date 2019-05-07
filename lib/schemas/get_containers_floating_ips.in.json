@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "all": {
+            "required": false,
+            "type": "boolean"
+        },
+        "X_Auth_Token": {
+            "required": true,
+            "type": "string"
+        },
+        "X_Auth_Project_Id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "t": {
+            "required": true,
+            "type": "string"
+        },
+        "q": {
+            "required": false,
+            "type": "boolean"
+        },
+        "nocache": {
+            "required": false,
+            "type": "boolean"
+        },
+        "pull": {
+            "required": false,
+            "type": "boolean"
+        },
+        "requestBody": {},
+        "X_Auth_Token": {
+            "required": true,
+            "type": "string"
+        },
+        "X_Auth_Project_Id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

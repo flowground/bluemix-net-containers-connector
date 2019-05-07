@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "name_or_id": {
+            "required": true,
+            "type": "string"
+        },
+        "force": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Auth_Token": {
+            "required": true,
+            "type": "string"
+        },
+        "X_Auth_Project_Id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

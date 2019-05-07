@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "fsIOPS": {
+                    "description": "The number of input/output transactions per second. Available values are 0.25, 2 or 4.",
+                    "format": "double",
+                    "type": "number"
+                },
+                "fsName": {
+                    "description": "The name of the new file share that you want to create. The name can contain uppercase letters, lowercase letters, numbers, underscores (_), and hyphens (-).",
+                    "type": "string"
+                },
+                "fsSize": {
+                    "description": "The size of the file share in gigabyte. Run `cf ic volume fs-flavor-list` or call the GET /volumes/fs/flavors/json API endpoint to retrieve a list of available file share sizes. ",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "fsName",
+                "fsSize",
+                "fsIOPS"
+            ],
+            "type": "object"
+        },
+        "X_Auth_Token": {
+            "required": true,
+            "type": "string"
+        },
+        "X_Auth_Project_Id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
